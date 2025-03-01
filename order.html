@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub - Order Online</title>
+    <link rel="stylesheet" href="foodhub.css">
+</head>
+<body>
+    <header>
+        <h1>Order Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+</ul>
+</nav>
+</header>
+<main>
+<section class="order">
+<h2>Place Your Order</h2>
+<form id="orderForm">
+    <!-- Order Section -->
+    <div class="form-group">
+        <label for="item">Select Item:</label>
+        <select id="item" name="item" required>
+            <option value="5.99">Burger - $5.99</option>
+            <option value="2.99">Fries - $2.99</option>
+            <option value="4.99">Chicken Nuggets - $4.99</option>
+            <option value="1.99">Soda - $1.99</option>
+            <option value="2.49">Ice Cream - $2.49</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+    </div>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <div id="totalPayment">
+        <h3>Total Payment: $<span id="total">0.00</span></h3>
+    </div>
+
+    <!-- Billing Information Section -->
+    <h2>Billing Information</h2>
+    <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+    </div>
+
+    <!-- Payment Method Section -->
+    <h2>Payment Method</h2>
+    <div class="form-group">
+        <label>Select Payment Method:</label>
+        <div>
+            <input type="radio" id="momo" name="payment" value="momo" required>
+            <label for="momo">Momo</label>
+        </div>
+        <div>
+            <input type="radio" id="paypal" name="payment" value="paypal" required>
+            <label for="paypal">PayPal</label>
+        </div>
+    </div>
+
+    <!-- Momo Payment Details (Hidden by Default) -->
+    <div id="momoDetails" class="payment-details" style="display: none;">
+        <div class="form-group">
+            <label for="momoNumber">Momo Number:</label>
+            <input type="text" id="momoNumber" name="momoNumber">
+        </div>
+    </div>
+
+    <!-- PayPal Payment Details (Hidden by Default) -->
+    <div id="paypalDetails" class="payment-details" style="display: none;">
+        <div class="form-group">
+            <label for="paypalEmail">PayPal Email:</label>
+            <input type="email" id="paypalEmail" name="paypalEmail">
+        </div>
+    </div>
+
+    <button type="submit">Place Order</button>
+</form>
+</section>
+</main>
+<footer>
+        <p>&copy; 2025 Food Hub. All rights reserved.</p>
+        <div class="social-media">
+          <a href="#">🐦 Twiter</a>
+            <a href="#">📘 Facebook</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </footer>
+
+    <div id="bottom-of-conyent"></div>
+    <div style="height: 100px; overflow-y: auto;"></div>
+
+</body>
+</html>
